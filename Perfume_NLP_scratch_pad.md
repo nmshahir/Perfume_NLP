@@ -7,3 +7,9 @@ New Issue: git can't push because that phantom file was Too Large
 SOLUTION: https://stackoverflow.com/questions/33360043/git-error-need-to-remove-large-file
     "git filter-branch -f --tree-filter 'rm -f path/to/large_file_name' HEAD --all"
 Side Notes: Evidently?? filter-repo is the updated version according the amount of Distressed Messages git provided to me when  I Ran This
+
+## Lesson: Transposing a table where you want the first row to be the column names
+df_final <- df %>%
+  t() %>%
+  as.data.frame() %>%
+  row_to_names(row_number = 1)
